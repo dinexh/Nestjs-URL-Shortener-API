@@ -23,7 +23,43 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A URL Shortener API built with [NestJS](https://github.com/nestjs/nest) and PostgreSQL.
+
+## Environment Setup
+
+Create a `.env` file in the root directory with the following variables:
+
+```bash
+DATABASE_URL=postgresql://username:password@host:port/database
+```
+
+### Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `DATABASE_URL` | PostgreSQL connection string with SSL enabled | Yes |
+
+## Database Setup
+
+This application uses **PostgreSQL** with TypeORM.
+
+### Prerequisites
+
+- PostgreSQL database (local or hosted like Supabase, Neon, Railway, etc.)
+- SSL must be enabled on the database connection
+
+### Database Schema
+
+The application will automatically create the following table:
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `id` | `integer` | Auto-generated primary key |
+| `originalUrl` | `string` | The original long URL |
+| `shortUrl` | `string` | The generated short URL (unique) |
+| `createdAt` | `timestamp` | Creation timestamp |
+
+> **Note:** With `synchronize: true` enabled, TypeORM will automatically create/update the database schema. For production, consider using migrations instead.
 
 ## Project setup
 
