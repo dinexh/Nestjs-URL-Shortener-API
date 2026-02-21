@@ -25,20 +25,6 @@
 
 A URL Shortener API built with [NestJS](https://github.com/nestjs/nest) and PostgreSQL.
 
-## Environment Setup
-
-Create a `.env` file in the root directory with the following variables:
-
-```bash
-DATABASE_URL=postgresql://username:password@host:port/database
-```
-
-### Environment Variables
-
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `DATABASE_URL` | PostgreSQL connection string with SSL enabled | Yes |
-
 ## Database Setup
 
 This application uses **PostgreSQL** with TypeORM.
